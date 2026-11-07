@@ -1,0 +1,65 @@
+/* -- alert :: v.: 0.01 r.: 07/05/25 @ pp */
+/*
+ * v. 0.01 @ pp (11/04/25): utworzenie pliku + zmiany RWD (SKCZDEV-779)
+ * v. 0.02 @ pp (07/05/25): przyciemnienie pomaranczowego koloru tla ma zgodny z WCAG (SKCZDEV-779)
+ */
+section.alert {width: 100%; max-width: 100%; margin-bottom: 0 !important;}
+section.alert, section.alert.color-1 {background-color: #af6406;}/* brown (was orange: #f7941e) */
+section.alert.color-2 {background-color: var(--biz-bg-color);}
+section.alert.color-3 {background-color: var(--ind-bg-color);}
+section.alert.color-4 {background-color: var(--blue-bg-color);}
+section.alert .inner {position: relative; padding: 0; background: transparent; min-height: 50px;}
+section.alert p {display: inline-block; color: var(--white-color); line-height: 1; vertical-align: middle;}
+section.alert .text > span {height: 0;}
+section.alert a.link-name {position: absolute; top: 0; left: 0; width: calc(100% - 34px); height: calc(100% - 37px); margin-top: 18px; color: var(--white-color); text-align: right;}
+section.alert a.link-name:hover, section.alert a.link-name:focus {text-decoration: none;}
+section.alert a.link-name .link-label::after {content:' >';}
+section.alert span.close {position: absolute; right: 0; top: 14px; display: inline-block; width: 24px; height: 24px; color: var(--white-color); line-height: .6; text-align: center; cursor: pointer; overflow: hidden;}
+section.alert span.close::after {position: absolute; top: 0; left: 0; right: 0; bottom: 0; color: inherit; content: '\00d7';}
+section.alert a.link-name:hover {opacity: .7;}
+section.alert span.close:hover {background: var(--white-color); color: var(--black-color); border-radius: 4px; opacity: 1;}
+section.alert a.link-name:hover::before {display: none;}
+section.alert .alert-title {width: 10%; margin: 0 .75em .25em;}
+section.alert .alert-title p {font-weight: bold;}
+section.alert .alert-text {width: 70%; text-align: center; margin: 0 .25em .25em;}
+section.alert .alert-text p {width: 100%;}
+section.alert .img-box img {position: absolute; top: 0; bottom: 0; max-width: .75em; margin: auto 10px;}
+
+#alert-box:not(:empty) + #top-border {display: none;}
+#alert-box section.alert .alert-box .alert-text {width: 92%; padding-left: 29px; margin: .25em .25em .35rem .25rem; box-sizing: border-box; line-height: 16px; text-align: left;}
+#alert-box section.alert .alert-text h2.title {display: inline ;margin: 0; padding: 0 .25em 0 0; color: var(--white-color); line-height: 1; vertical-align: middle; font-family: "Mbank Semi", Arial, sans-serif; font-size: .4rem; text-align: left;}
+#alert-box section.alert p {display: inline; color: var(--white-color); line-height: 1; vertical-align: middle;}
+
+@media screen and (max-width: 830px) {
+	#alert-box section.alert .alert-box .alert-text {display: inline-block; padding-top: 4px;}
+	#alert-box section.alert .alert-text h2.title, #alert-box section.alert p {display: block;}
+	#alert-box section.alert .alert-text h2.title {font-size: .5rem;}
+	section.alert .alert-title {margin: 0 0 .25em .75em;}
+	section.alert .alert-title p {line-height: 1;}
+}
+@media screen and (max-width: 690px) {
+	section.alert .alert-title {width: 80%; margin: 0 .25em .25em;}
+	section.alert .img-box + .alert-title {margin-left: .75rem;}
+	section.alert .img-box img {top: 44px; bottom: 100%;}
+	.firefox section.alert .img-box img {top: 24px;}
+	section.alert .alert-text {width: 95%; text-align: left;}
+	
+	#alert-box .link-label {position: absolute; bottom: .2rem; right: 0;}
+	#alert-box .alert-with-link {padding-bottom: .3rem;}
+}
+@media screen and (max-width: 640px) {
+	#alert-box a.link-name {bottom: 6px; width: calc(100% - 30px); height: auto; margin-top: 6px;}
+	#alert-box section.alert .alert-box .alert-text	{width: 94%; padding-left: .75rem; padding-right: .325rem; margin: .25em 0 .35rem 0;}
+    #alert-box section.alert .img-box {display: block;}
+    #alert-box section.alert .img-box img {top: .325rem; bottom: auto; margin: auto;}
+    #alert-box section.alert p {font-size: .35rem;}
+	#alert-box span.close {top: 8px; right: -8px;}
+}
+@media screen and (max-width: 414px) {
+	section.alert a.link-name {text-align: right;}
+	section.alert .alert-text {width: 91%;}
+	section.alert .alert-title + .alert-text {margin: 0 .25em .45em;}
+}
+@media screen and (max-width: 360px) {
+	section.alert span.close {top: 9px; background-position: 10px;}
+}

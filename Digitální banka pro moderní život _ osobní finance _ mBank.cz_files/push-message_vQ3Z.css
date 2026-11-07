@@ -1,0 +1,88 @@
+/* CSS-Doc for mBank (push-message) ::v.: 0.18 r.: 05/05/25 @ pp */
+/*
+ * v. 0.01 @ pp (29/09/16): utworzenie pliku
+ * ...
+ * v. 0.16 @ pp (28/01/20): poprawka deklaracji 'overflow-y' skrzynki; przeniesienie stylow z mpd.css (SKCZDEV-470)
+ * v. 0.17 @ pp (26/07/21): usuniecie ujemnego marginesu z tytulu (SKCZDEV-541)
+ * v. 0.18 @ pp (24/04/25): zmiany kolorystyczne zamykajacego krzyzyka (.close) ze wzgledu na WCAG (SKCZDEV-778)
+ */
+/* push-message-box */
+#overlay {position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999; background: rgba(0, 0, 0, 0.5);}
+div.message-box {position: absolute; top: 100px; left: calc(50% - 300px); z-index: 100000; width: 100%; max-width: 600px; padding: 20px 0 0; background: var(--light-gray-color); font-size: .38em; box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); overflow-y: auto;}
+div.message-box > .close {position: absolute; top: 10px; right: 6px; display: block; width: 24px; height: 24px; padding: 4px; border: 1px solid transparent; color: #999; text-align: center; text-decoration: none;}
+div.message-box > .close::after {position: absolute; top: 0; right: 0; bottom: 0; left: 0; color: inherit; line-height: .6; font-size: 54px; content: '\00d7';}
+div.message-box > .close:hover {border-color: var(--gray-color); border-radius: 4px; background: var(--white-color); color: var(--end-text);}
+div.message-box .bg {position: absolute; top: 0; left: 0; width: 100%; height: 6px;}
+div.message-box .bg {background-image: linear-gradient(to right,#e41e0a 0,#e41e0a 27%,#201c17 27%,#201c17 32%,#f39100 32%,#f39100 57%,#cc0b18 57%,#cc0b18 73%,#0077bd 73%,#0077bd 77%,#18a035 77%,#18a035 100%);}
+div.message-box.biz .bg {background: url(/.templates/img/section-biz.png); background-size: contain;}
+div.message-box > p.heading.h1 {background-color: var(--light-gray-color); margin-right: 50px; margin-left: 50px; font-size: .97rem; text-align: center;}
+
+/* push-message-box */
+div.message-box .messages {margin-top: -1px; padding: 0 0 10px;}
+div.message-box .messages > p {display: none;}
+div.message-box .message {position: relative; width: 520px; max-width: 520px; margin: 0 auto 15px; padding: 0 0 35px;}
+div.message-box .message::after {position: absolute; bottom: 0; left: auto; right: 0; display: block; width: 77%; height: 1px; margin: auto; background: #aaa; content: '';}
+div.message-box .message.loan-calc::after {content: none;}
+div.message-box .message:last-child {margin-bottom: 0;}
+div.message-box .message:last-child::after {display: none;}
+div.message-box .message a.outer {height: 100%; z-index: 1;}
+div.message-box .message .img {display: table-cell; padding: 0 10px 0 0; vertical-align: top;}
+div.message-box .message .img .wrapper {overflow: hidden;}
+div.message-box .message .img img {display: block; transition: all 1s ease;}
+div.message-box .message .img img:hover, div.message-box .message a.outer:hover + .img img {transform: scale(1.10);}
+div.message-box .message .text {display: table-cell; vertical-align: top;}
+div.message-box .message h5 {margin: -6px 0 .15rem;}
+div.message-box .text {width: 80%; margin: 0;}
+div.message-box .text ul {list-style-type: none;}
+div.message-box .text li {position: relative;}
+div.message-box .text li::before {position: absolute; top: 0.45em; left: -20px; display: inline-block !important; width: 0.45em !important; height: 0.45em !important; background: var(--ind-bg-color); content: '';}
+div.message-box.biz .text li::before {background: var(--biz-bg-color);}
+div.message-box .b-add {right: 0; bottom: 10px; z-index: 1; padding: 0;}
+div.message-box .b-add p {margin: 0; line-height: 1;}
+div.message-box .message a {color: var(--ind-bg-color);}
+div.message-box.biz .message a {color: var(--biz-bg-color);}
+div.message-box .message-date {display: none;}
+div.message-box .legal-note {top: auto; right: auto; bottom: 10px; left: 0; display: none;}
+div.message-box .legal-note > .legal-label {position: static; padding: 0; background: none; font-size: .4rem;}
+div.message-box .legal-note > .legal-text {top: 35px; right: auto; left: -20px; font-size: .86em;}
+div.message-box .legal-note > .legal-text::before {right: auto; left: 50px;}
+div.message-box .legal-note > .legal-text p {font-size: 100%;}
+
+@media screen and (max-width: 640px) {
+	div.message-box {position: fixed !important;}
+}
+@media screen and (max-width: 600px) {
+	div.message-box {top: 0; left: 0; width: 100%; padding-top: 25px;}
+	body div.message-box .message {margin: 0 15px 15px; width: calc(100% - 30px);}
+}
+@media screen and (max-width: 480px) {
+	div.message-box > p.heading.h1 {font-size: 0.9rem;}
+	div.message-box .message::after {width: 100%;}
+}
+@media screen and (max-width: 360px) {
+	body div.message-box .text h5 {margin-bottom: 0; font-size: 24px;}
+	div.message-box .message .img {display: block; float: left;}
+	div.message-box .message .text {display: block; width: auto;}
+	div.message-box .text ul {float: left;}
+	div.message-box .text p {float: left;}
+	div.message-box .legal-note > .legal-text {top: 30px;}
+}
+
+/* popup-nonclient */
+div.message-box .inner-message {max-width: 450px; margin: 0 auto 30px; text-align: center;}
+div.message-box .offers {margin: 25px 0;}
+div.message-box .offers .img {position: relative; display: inline-block; width: 200px; height: 100px; margin: 0; overflow: hidden;}
+div.message-box .offers .img img {display: block; width: 100%; height: 100%; transition: all 1s ease;}
+div.message-box .offers .img img:hover, div.message-box .offers p:hover + img {transform: scale(1.10);}
+div.message-box .inner-message a {text-decoration: underline;}
+div.message-box .inner-message a:hover {text-decoration: none;}
+div.message-box .offers p {position: absolute; top: 0; left: 0; z-index: 1; display: table; width: 100%; height: 100%; margin: 0;}
+div.message-box .offers a {display: table-cell; color: var(--white-color); vertical-align: middle; font-size: 1.5em; text-decoration: none;}
+div.message-box .offers a:hover {text-decoration: underline;}
+.firefox div.message-box .offers .img, .safari div.message-box .offers .img {margin: 0.5px 0;}
+.chrome div.message-box .offers .img, .opera div.message-box .offers .img {margin: 1px 0;}
+.edge div.message-box .offers .img {margin: 0.62px 0;}
+
+@media screen and (max-width: 480px) {
+	div.message-box .offers .img {width: 195px; height: 70px;}
+}

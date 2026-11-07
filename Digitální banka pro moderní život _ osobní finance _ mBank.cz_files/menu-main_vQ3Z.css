@@ -1,0 +1,417 @@
+/* main menu */
+#page-head div.no-submenu {padding-bottom: 23px;} 
+#page-head {min-height: 40px;}
+.proper-head {padding-top: 23px; padding-bottom: 70px;}
+body.cats .proper-head {/*padding-bottom: 23px;*/}
+body.cats #page-head, body.community #page-head {border-bottom: 1px solid #bbb !important;}
+body.cats.no-border #page-head, body.community.no-border #page-head {border-bottom: 0 !important;}
+#head {position: relative;}
+#page-head div.container {position: relative; padding-top: 0; width: calc(100% - 1rem); max-width: 1310px; padding: 0 .5rem;}
+#page-head nav {margin: 0 0 0 2.8em; padding: 0; background: var(--white-color);}
+#page-head nav ul {display: table; margin: 0; padding: 0; list-style: none; text-transform: lowercase; font-size: .4em;}
+#page-head nav ul.menu {float: left; /*width: 1px;*/}
+#page-head nav li {display: table-cell; height: 50px; margin: 0; padding: 0 1em; vertical-align: middle;}
+#page-head nav h2 {margin: 0;}
+#page-head ul.menu a:focus, #page-head ul.menu a:hover {text-decoration: none;}
+#page-head ul.menu a::after {position: absolute; left: calc(3em - 100%); bottom: 0; width: calc(200% - 4em); height: 3px; visibility: hidden; content: '';}
+#page-head ul.menu a::after {bottom: -5px;}
+#page-head ul.submenu a::after {bottom: 5px; display: block;}
+#page-head ul.menu > li > .menu-item-wrapper > a::after {left: -100%; width: 200%;}
+#page-head ul.menu a::after {
+	background: var(--ind-bg-color); /* Old browsers */
+	background: linear-gradient(to left, var(--ind-bg-color) 0%, var(--ind-bg-color) 50%, transparent 50%, transparent 50%, transparent 100%);	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+#page-head ul.menu a::after {
+	/* from left side, its mean first color(will be last) is color of needing class, then width, and then color of transparent, cause left half will be , but invisible */
+    transition: all .3s ease-in-out 0s;
+    transform: scaleX(0);
+}
+
+#page-head ul.menu > li > a::after {width: 200%; left: -100%;}
+#page-head ul.menu > li:nth-child(1) > div > a::after, #page-head ul.menu > li:nth-child(1):hover > div > a::after {
+	background: var(--ind-bg-color) !important;
+	background: linear-gradient(to left, var(--ind-bg-color) 0%, var(--ind-bg-color) 50%, transparent 50%, transparent 50%, transparent 100%) !important;
+}
+#page-head ul.menu > li:nth-child(2) > div > a::after, #page-head ul.menu > li:nth-child(2):hover > div > a::after {
+	background: var(--biz-bg-color) !important;
+	background: linear-gradient(to left, var(--biz-bg-color) 0%, var(--biz-bg-color) 50%, transparent 50%, transparent 50%, transparent 100%) !important;
+}
+#page-head ul.menu > li.dropdown:nth-child(1) > div > a::after, body.premium #page-head ul.menu li.dropdown.active > div > a::after {
+	background: var(--ind-bg-color);
+	background: linear-gradient(to left, var(--ind-bg-color) 0%, var(--ind-bg-color) 50%, transparent 50%, transparent 50%, transparent 100%);
+}
+body.biz #page-head ul.menu li a::after, #page-head ul.menu > li.dropdown:nth-child(4) > div > a::after, body.biz #page-head nav ul.menu li.dropdown.active > div > a::after {
+	background: var(--biz-bg-color);
+	background: linear-gradient(to left, var(--biz-bg-color) 0%, var(--biz-bg-color) 50%, transparent 50%, transparent 50%, transparent 100%);
+}
+
+#page-head ul.menu a:hover::after, #page-head .menu > li.active > .menu-item-wrapper > a::after, #page-head .menu li.active .submenu li.active > .menu-item-wrapper > a::after {visibility: visible;}
+#page-head ul.menu a:hover::after, #page-head .menu > li.active > .menu-item-wrapper > a::after, #page-head .menu li.active .submenu li.active > .menu-item-wrapper > a::after {
+	transform: scaleX(1);
+}
+/*.safari.desktop #page-head ul.menu > li > a::after, */
+.safari.desktop.win #page-head ul.menu > li > a::after {left: 0; width: 200%;}
+.safari.desktop.mac #page-head ul.menu > li > a::after {left: -100%; width: 200%;}
+
+#page-head a.menu-item-href {position: static; display: block; height: auto; color: #636565; text-align: left; line-height: 1.24; font-size: .88em; white-space: normal; text-transform: lowercase;}
+#page-head .menu > li > .menu-item-wrapper {position: relative; height:40px; display: table-cell; vertical-align: middle; top: -2px;}
+#page-head .menu > li > .menu-item-wrapper::before {position: absolute; display: table-cell; height: 40px; vertical-align: middle; content: '';}
+#page-head a.menu-item-href:hover {text-decoration: none;}
+#page-head ul li::before, #page-foot ul li::before {display: none;}
+#page-head li.active a.menu-item-href {font-weight: bold;}
+.no-sub #page-head li.active ul.submenu, .no-sub #page-head #searchengine {display: none;}
+
+body.biz #page-head li.active a::after {background-color: var(--biz-bg-color);}
+#page-head a > span.dropdown, #page-head a > span.spacer {display: none;}
+#page-head ul.submenu {position: absolute; left: 0; display: none; width: auto; max-width: none; height: 44px; margin: 14px 0 0; padding: 0; font-size: 1em;}/* menu should not have set width because it is set in script */
+#page-head ul.submenu li {position: relative; border-right: none;}
+#page-head ul.submenu li:nth-last-child(2), #page-head ul.submenu li:nth-last-child(3) {border-right: none;}
+#page-head ul.submenu h3 {margin: 0; font-size: 1em;}
+#page-head ul.submenu a {display: block; padding: 4px 0 6px; color: #636565; text-align: center; text-transform: lowercase; line-height: .9;}
+
+body.biz #page-head ul.submenu a:link::after, body.priv #page-head ul.submenu a:link::after, body.corpo #page-head ul.submenu a:link::after, body.em #page-head ul.submenu a:link::after {background-color: transparent;}
+#page-head ul.submenu li:first-child a {padding-left: 0;}
+#page-head ul.submenu li:last-child a {padding-right: 0;}
+#page-head li.active ul.submenu {display: block;}
+/*#page-head ul > li.active > ul.submenu {margin-left: -1em;}*/
+#page-head li.active li.active a {font-weight: bold;}
+
+#nav-toggle {display: none !important;}
+#main-nav-toggle {display: none;}
+
+#nav-toggle {display: none !important;}
+
+/* styles for dropdown main menu and offer boxes (SKCZDEV-441) */
+.nav-file.cats .proper-head, .nav-file.community .proper-head {padding-bottom: 70px;}
+.nav-file #page-head ul.menu a::after {height: 2px;}
+.nav-file #page-head ul.menu a::after {left: calc(4em - 100%); width: calc(200% - 5.4em);}
+.nav-file #page-head nav ul.menu > li {padding: 0 1em;}
+.nav-file #page-head nav ul.menu li.added-box {display: none;}
+.nav-file #page-head a.menu-item-href {color: var(--main-text-color);}
+.nav-file #page-head li.active > ul.submenu, .nav-file.mblog #page-head .menu > li > ul.submenu {display: table;}
+.nav-file #page-head ul.submenu li.dropdown::after {position: absolute; right: -2px; top: 0; bottom: 0; z-index: -1; width: 10px; height: 6px; margin: auto; background: url(../../img/arrows.svg) no-repeat 0 0; background-size: 10px; transition: transform .2s; content: '';}
+.biz.nav-file #page-head ul.submenu li.dropdown::after {background-position: 0 -12px;}
+
+.nav-file #page-head ul.menu > li > ul.submenu > li {padding: 0;}
+.nav-file #page-head li.dropdown > ul.submenu > li.offer-box {position: absolute; top: 0; right: 0; box-sizing: border-box; display: block; padding: 5px; border-radius: 3px; white-space: normal;}
+.nav-file #page-head li.offer-box > div {width: 360px;}
+.offer-box:hover > .text-box {box-shadow: inset 0 -8.75rem 0 0 var(--light-gray-color);}
+.offer-box .text-box {position: relative; display: block; box-sizing: border-box; height: 284px; padding: .575rem .6rem 1.5rem .6rem; border: 1px solid #d0d0d0; border-radius: 3px; background: var(--white-color); box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .22); text-transform: none;}
+.offer-box .promoted-5.text-box, .offer-box .promoted-6.text-box {margin-bottom: 30px;}
+.offer-box .text-box strong, .offer-box .text-box b {font-family: "Montserrat Lite", Arial, sans-serif; font-weight: bold;}
+.offer-box .text-box .headline {display: flex; justify-content: space-between; align-items: center; min-height: 1.25rem; margin-top: 0; margin-bottom: 18px; text-align: left;}
+.offer-box .text-box p {line-height: 1.5; font-family: inherit;}
+.offer-box .headline > p {flex-shrink: 1; flex-grow: 0;}
+.offer-box .headline > h3, .offer-box .headline > p, .offer-box .headline h2 {align-self: start; font-family: "Mbank Semi", Arial, sans-serif; font-size: .45rem; font-weight: normal; line-height: 1.2; text-align: left;}
+.offer-box .headline img {flex-basis: 1.4rem; flex-grow: 1; flex-shrink: 0; max-width: 1.4rem; max-height: 1.4rem; margin-left: .5rem;}
+.nav-file #page-head li.offer-box .text-box ul {display: block; margin: .22rem 0; padding-left: .4rem; font-size: .4rem; font-family: inherit;}
+.nav-file #page-head li.offer-box .text-box ul li {position: relative; margin-bottom: .5em; line-height: 1.2; white-space: normal;}
+.nav-file #page-head li.offer-box .text-box ul li::before {position: absolute; left: -.4rem; top: .2rem; display: block; width: .125rem; height: .125rem !important; background-color: var(--ind-bg-color); content: '';}
+.nav-file #page-head li.offer-box .text-box a {display: inline; padding: 0; text-transform: none; text-align: initial; font-size: 100%;}
+.nav-file #page-head li.offer-box .text-box a:hover {text-decoration: underline;}
+.offer-box .link-name::before {bottom: 2px;}
+.nav-file #page-head li.offer-box .text-box .more {position: absolute; bottom: .8rem; right: .7rem; z-index: 2; padding: 0; line-height: 1; text-transform: lowercase; font-size: .4rem; font-family: "Montserrat Lite Semi", Arial, sans-serif;}
+.nav-file #page-head li.offer-box .text-box .more:hover {background: none; font-weight: normal;}
+.firefox #page-head li.offer-box .text-box .more:hover {letter-spacing: 0;}
+.nav-file #page-head li.offer-box .text-box .more.button.red {padding: .4em .75em .5em; bottom: .56rem;}
+.nav-file #page-head li.offer-box .text-box .more.button.red::before {display: none;}
+.nav-file #page-head li.offer-box .text-box .more.button.red:hover {background: #d1202e;}
+.offer-box .legal-note {right: auto; left: 0;}
+.offer-box .legal-note .legal-label {top: -48px; right: auto; left: 20px; background: none; text-transform: lowercase; font-size: .25rem;}
+.offer-box .legal-note .legal-text {left: 0; right: auto;}
+#page-head .offer-box .legal-note .legal-text p {font-size: .325rem;}
+
+.offer-box .text-box .color-bar {z-index: 2; font-size: 14px; text-align: center; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .22);}
+.offer-box .text-box.promoted:hover .color-bar {box-shadow: none; transition: .4s;}
+.offer-box .text-box .color-bar p, .offer-box .text-box .color-bar-solo p {font-size: 14px; line-height: 1.2;}
+
+/* offer-box promo */
+.offer-box .promo {width: 0; height: 0; border-right: 1.775rem solid red; border-bottom: 1.775rem solid transparent; position: absolute; right: -1px; top: -1px;}
+.offer-box .promo::after {content: '%'; font-weight: bold; color: var(--white-color); position: absolute; left: .9rem; top: .075rem; font-size: .9rem;}
+.offer-box.promoted .headline {padding-right: .75rem;}
+.offer-box .promo {position: absolute; right: -1px; top: -1px;}
+.offer-box .promo {overflow: hidden; width: 2.5rem !important; height: 2.5rem; border: 0; border-radius: 3px; z-index: 2;}
+.offer-box.img .promo {display: none;}
+.offer-box.promoted-3 .promo::after {top: .25rem;}
+.offer-box .promo::after {content: '%'; font-weight: bold; color: var(--white-color); position: absolute; left: 1.55rem; top: .075rem; font-size: .9rem;}
+.offer-box.promoted .headline {padding-right: .75rem;}
+.offer-box.promoted.img .headline {padding-right: 0;}
+.offer-box .promoted:not(.promoted-2):not(.promoted-3) .promo::before {content: ''; background-color: #f00; width: 2.5rem; height: 2.5rem; display: block; position: absolute; border-radius: 0; transform: rotate(45deg) translate(0, -70px);}
+.offer-box.promoted-2 .text-box {border-color: #f9dc6b; box-shadow: inset 0 0 0 0 #ffc; transition: .4s;}
+.offer-box.promoted-2 .promo {overflow: hidden;width: 2.5rem; height: 2.5rem; border: 0 ; border-radius: 3px; z-index: 2; top: 5px; right: 5px;}
+.offer-box.promoted-2 .promo span {position: absolute; z-index: 1; font-weight: bold; font-family: 'Montserrat Lite';}
+.offer-box.promoted-2 .promo span.units {top: .3rem; right: .125rem; font-size: .425rem;}
+.offer-box.promoted-2 .promo span:first-child {top: .2rem; right: .5rem; font-size: .55rem;} 
+.offer-box.promoted-2 .promo::after {content: ''; border-radius: 50%; border: 0; width: 2.5rem; height: 2.5rem; top: -1.25rem; right: -1.25rem; z-index: 0; background-color: #f9dc6b; color: #4c4c4c;left: auto;}
+.offer-box.promoted-2:hover .text-box {box-shadow: inset 0 -8.75rem 0 0 #ffc;}
+.offer-box.promoted-3 .text-box {background-color: #efd063; border: 1px solid #efd063; transition: .4s;}
+.offer-box.promoted-3 .text-box::before {content: ''; border: 2px dashed var(--white-color); right: .125rem; left: .125rem; bottom: .125rem; top: .125rem; position: absolute;}
+.offer-box.promoted-3 .promo {border-right-color: transparent; top: .3rem; right: .6rem;}
+.offer-box.promoted-3 .promo::after {background-color: transparent; font-size: 1.2rem;}
+.offer-box.promoted-3:hover .text-box {box-shadow: inset 0 -8.75rem 0 0 #f9dc6b;}
+.offer-box.promoted-4 .text-box {border: 4px solid #efd063;}
+
+.biz #page-head .offer-box a.more {color: var(--biz-bg-color);}
+.ind #page-head .offer-box a.more {color: var(--ind-bg-color);}
+
+.nav-file #page-head ul.submenu li.dropdown.opened::after {transform: rotate(180deg);}
+
+/* nowe style */
+.nav-file #page-head ul.submenu li > div > a {margin: 0 0 .1em; padding: .9em 1em; color: var(--main-text-color);}
+.nav-file #page-head ul.submenu li:last-child > div > a {padding-right: 1em;}
+.nav-file #page-head li ul.submenu ul.submenu {display: none;}
+.nav-file #page-head li ul ul.submenu {top: 92%; left: 1em; width: auto; height: auto; margin: 0; padding: 10px 0; border-radius: 3px; background: var(--white-color); box-shadow: 0 1px 16px rgba(0, 0, 0, .22), 0 0 1px rgba(0, 0, 0, .32);}
+.nav-file #page-head li ul ul.submenu li {display: list-item; height: auto; padding: 0; border: none; font-weight: normal; white-space: nowrap;}
+.nav-file #page-head li ul ul.submenu li a::after {content: none;}
+.nav-file #page-head li ul ul.submenu li > div > a {margin: 0; /*padding: .5rem; */text-align: left; font-weight: inherit;}
+.firefox #page-head li ul ul.submenu li > div > a:hover {letter-spacing: -.3px;}
+/*.nav-file #page-head li ul ul.submenu li:first-child a {padding-left: .5rem;}*/
+.nav-file #page-head li ul ul.submenu li > div > a:hover, .nav-file #page-head li.active ul ul.submenu li.active {background: #fafafa; font-weight: bold;}
+
+/* obecne style w main-menu zmienione */
+#page-head ul.menu > li > .menu-item-wrapper > a:hover::after, #page-head .menu > li.active > .menu-item-wrapper > a::after, #page-head .menu li.active .submenu li.active > .menu-item-wrapper > a::after, .nav-file #page-head .menu li.active .submenu li.opened > .menu-item-wrapper > a::after {visibility: visible;}
+#page-head ul.menu > li > .menu-item-wrapper > a:hover::after, #page-head .menu > li.active > .menu-item-wrapper > a::after, #page-head .menu li.active .submenu li.active > .menu-item-wrapper > a::after, .nav-file #page-head .menu li.active .submenu li.opened > .menu-item-wrapper > a::after {transform: scaleX(1);}
+#page-head li.active li.active > .menuitem-wrapper a {font-weight: bold;}/* zmiana selektora */
+#page-head li.active li.active li.added-box a {font-weight: initial;}
+/*body div#page-wrapper div.footer-box li p {height: 24px;}*/
+
+@media screen and (max-width: 1300px) {
+	.nav-file #page-head nav ul.menu > li {padding: 0 .9em;}
+}
+
+@media screen and (max-width: 1280px) {
+	#page-head ul.submenu {max-width: calc(1070px - -1rem);}
+	
+	.nav-file #page-head nav ul.menu > li {padding: 0 .8em;}
+	.nav-file #page-head ul > li.active > ul.submenu {margin-left: -1em;}
+}
+
+@media screen and (max-width: 1200px) {
+	.nav-file #page-head nav ul.menu > li {padding: 0 .7em;}
+	.nav-file #page-head ul.submenu li > div > a {padding-left: .9em; padding-right: .9em;}
+	.nav-file #page-head ul.menu a::after {left: calc(3.7em - 100%); width: calc(200% - 4.9em);}
+	.nav-file #page-head ul > li.active > ul.submenu {margin-left: -.9em;}
+}
+
+@media screen and (max-width: 1140px) {
+	.nav-file #page-head nav ul.menu > li {padding: 0 .6em;}
+}
+
+@media screen and (max-width: 1100px) {
+	#page-head nav ul {font-size: .36em;}
+	#page-head nav li {padding: 0 .8em;}
+	#page-head ul.submenu li {padding: 0 .8em;}
+	
+	.nav-file #page-head nav ul.menu > li {padding: 0 .5em;}
+	.nav-file #page-head ul.menu a::after {left: calc(3.6em - 100%); width: calc(200% - 4.8em);}
+	.nav-file #page-head ul.submenu li.dropdown::after {right: -2px;}
+	.nav-file #page-head ul.submenu li > div > a {padding-left: .8em; padding-right: .8em;}
+	.nav-file #page-head ul > li.active > ul.submenu {margin-left: -.8em;}
+}
+
+@media screen and (max-width: 1024px) {
+	.nav-file #page-head nav ul.menu > li {padding: 0 .3em;}
+}
+
+@media screen and (max-width: 992px) {
+	#page-head nav ul {font-size: .34em;}
+	#page-head nav li {padding: 0 .55em;}
+	#page-head ul.submenu li {padding: 0 .6em;}
+	
+	.nav-file #page-head nav ul.menu > li {padding: 0 .2em;}
+}
+
+@media screen and (max-width: 920px) {
+	#page-head {z-index: 16;}
+	#page-head nav {height: 58px; margin: 0 0 0 1.1em;}
+	
+	.lp #page-head nav {height: auto;}
+	.proper-head, body.cats .proper-head, body.community .proper-head, #page-head div.no-submenu {padding-top: 0; padding-bottom: 0;}
+	/*body.logout #page-head nav {height: 43px;}*/
+	#page-head ul.menu a::after {display: none;}
+	#page-head nav ul.menu {position: absolute; left: -.5rem; right: 0; top: 1.45rem; z-index: 1; float: none; display: block; width: calc(100% - -.2rem); border-top: 1px solid var(--gallery-color); margin: 0; padding: 0 .4rem; background-color: var(--white-color); font-size: .4em; box-shadow: 0 2px 5px rgba(0, 0, 0, .2);}
+    #page-head nav ul.menu.active {display: block; border-bottom: 1px solid #bbb;}
+	#page-head nav ul.menu.active::after {position: absolute; right: -1px; bottom: 0; display: block; width: 1px; height: 100%; background-color: #bbb; content: '';}
+	
+	#page-head nav li {display: block; height: auto;}
+	#page-head .menu > li {position: static; padding: 0;}
+	#page-head .menu > li > .menu-item-wrapper {position: relative; padding: 0; display: block; height: auto; padding: .325rem 1rem .325rem 1.54rem;}
+	#page-head .menu > li > .hidden-920 {display: none;}
+	#page-head .menu > li > .menu-item-wrapper::after {position: absolute; top: 0; left: 0; height: 1px; width: 100%; background-color: var(--gallery-color); content: '';}
+	#page-head .menu > li:first-child > .menu-item-wrapper::after, .help #page-head .menu > li:first-child > .menu-item-wrapper::after, .placowki-bankomaty #page-head .menu > li:first-child > .menu-item-wrapper::after, .mblog #page-head .menu > li:first-child > .menu-item-wrapper::after, .search #page-head .menu > li:first-child > .menu-item-wrapper::after {display: none;}
+	#page-head ul.menu a::after {bottom: 0;}
+	#page-head ul.menu a.menu-item-href {font-size: 16px;}
+	#page-head li.active a.menu-item-href {color: var(--main-text-color);}
+	body.ind #page-head li.active a.menu-item-href {color: var(--ind-bg-color);}
+	body.biz #page-head li.active a.menu-item-href {color: var(--biz-bg-color);}
+	#page-head ul.submenu {left: 0; top: -1.5rem; z-index: 1; height: auto; max-width: none;}
+	#page-head ul.submenu li:last-child {border-right: none;}
+	#page-head li.active ul.submenu {display: block; width: 100vw; background-color: var(--white-color); margin: 0; padding: 1.5rem 0 0 0; box-shadow: 0 2px 5px rgba(0, 0, 0, .2);}
+	#page-head li.active ul.submenu {transition: .4s;}
+	#page-head li.active.show ul.submenu {left: -120vw; transition: .2s;} 
+	#page-head ul.submenu li.dummy {display: none;}/* adding item for mobile view is unnecessary (both: in old and new menu styles) */
+	#page-head ul.submenu li, .firefox #page-head ul.submenu li {float: none; display: block; height: 100%; padding: 0; margin: 0 .375rem; border-right: none;/* border-top: 1px solid var(--nav-border);*/}
+	/*#page-head ul.submenu li.rwd-add-menu, .firefox #page-head ul.submenu li.rwd-add-menu, #page-head ul.submenu li:first-child, .firefox #page-head ul.submenu li:first-child {border-top: 0 none transparent;}*/
+    #page-head ul.submenu li a {border-top: 1px solid var(--nav-border);}
+	#page-head .menu > li > ul.submenu > li:first-child > div > a {border-top: 0;}
+	#page-head nav ul.submenu .rwd-add-menu {border-bottom: none;}
+	#page-head nav .rwd-add-menu a::after {display: none;}
+	#page-head ul.submenu li a, #page-head ul.submenu li:first-child a {padding: 10px 40px; color: var(--black-color);/* border: none;*/}
+	#page-head ul.submenu li a br {display: none;}
+	#page-head ul.submenu a::before, #page-head ul.submenu a::after {display: none;}
+	#page-head nav ul.submenu .rwd-add-menu {display: none;}
+    body.sub.cats #page-head nav ul.submenu .rwd-add-menu.other:not(.basic), body.hp.cats #page-head nav ul.submenu .rwd-add-menu.other:not(.basic), body.community #page-head nav ul.submenu .rwd-add-menu.other:not(.basic) {display: block;}
+	#page-head nav ul.submenu li a::after {position: absolute; left: auto; right: 0; top: 1px; bottom: 0; display: block; width: 14px; height: 22px; margin: auto; background: transparent; content: '';}
+	#page-head ul.menu ul.submenu li a::after, #page-head ul.menu ul.submenu li a::after, #page-head ul.menu ul.submenu li a:hover::after, #page-head ul.menu ul.submenu li:hover a::after {display: none;}
+	#page-head #head ul.menu .rwd-add-menu a::after, #page-head #head ul.menu .rwd-add-menu a:hover::after {display: none;}
+	#page-head #head ul.menu .rwd-add-menu.basic a::after {display: block;}
+	#page-head nav ul.submenu li a::after {transform: rotate(0deg);}
+	body.sub #page-head nav ul.submenu .rwd-add-menu.rating, body.community #page-head nav ul.submenu .rwd-add-menu.rating {display: none; margin: 0 .375rem; padding: 10px 0; text-align: center;}
+	body.sub #page-head ul.submenu li.rwd-add-menu.rating.inited, body.community #page-head ul.submenu li.rwd-add-menu.rating.inited {display: block;}
+	#page-head ul.submenu li.rwd-add-menu.rating a.button {position: static; display: none; width: auto; padding: .45em .75em .5em; border-bottom: none;}
+	#page-head ul.submenu li.rwd-add-menu.rating.inited a.button {display: inline-block;}
+
+	#page-head nav ul.submenu li.active a::before {position: absolute; left: 1.25em; top: .75em; width: 0.5em; height: 0.5em; background-color: var(--ind-bg-color); content: ''; display: block;}
+	.biz #page-head nav ul.submenu li.active a::before {background-color: var(--biz-bg-color);}
+	#page-head nav ul.submenu li:last-child a::before {display: none !important;}
+	
+	body.ind nav ul.submenu .rwd-add-menu a.ind, body.corpo nav ul.submenu .rwd-add-menu a.corpo, body.biz nav ul.submenu .rwd-add-menu a.biz, body.priv nav ul.submenu .rwd-add-menu a.priv, body.em nav ul.submenu .rwd-add-menu a.em {display: inline-table !important;}
+	
+	/* submenu move */
+	.z-index-1001 {z-index: 1001 !important;}
+	.z-index-999, .note-999 {width: 100%; height: 100%;}
+	.note-999 {position: relative;}
+	#top-banner.note-ban-999 {z-index: 999; position: relative;}
+	.z-index-999::before, main.z-index-999 + footer::before {position: absolute; top: -30px; display: block; width: 100%; height: calc(100% - -30px); background-color: rgba(1, 1, 1, 0);}
+	.note-999::before {position: fixed;} 
+	.z-index-999::before, .note-999::before {transition: 1.2s; transition-delay: .1s;}
+	#page-content.z-index-999::before, .note-999::before, main.z-index-999 + footer::before {z-index: 999; background-color: rgba(1, 1, 1, 0.4); transition: .4s; transition-delay: .1s; content: '';}
+
+	#nav-toggle {display: inline-block !important; position: absolute; left: 3px; top: 18px; margin: auto; padding: 0; cursor: pointer;}
+	#nav-toggle span, #nav-toggle span::before, #nav-toggle span::after {position: absolute; top: 10px; display: block; width: 18px; height: 2px; border-radius: 1px; background: var(--ind-bg-color); cursor: pointer; content: '';}
+	.ind #nav-toggle span, .ind #nav-toggle span::before, .ind #nav-toggle span::after {background: var(--ind-bg-color);}
+	.biz #nav-toggle span, .biz #nav-toggle span::before, .biz #nav-toggle span::after {background: var(--biz-bg-color);}
+	#nav-toggle span::before {top: -7px;}
+	#nav-toggle span::after {top: 7px;}
+	.firefox #nav-toggle span::before {top: -6px;}
+	.firefox #nav-toggle span::after {top: 6px;}
+	#nav-toggle span, #nav-toggle span::before, #nav-toggle span::after {transition: all 500ms ease-in-out;}
+	#nav-toggle.active span {background-color: transparent;}
+	#nav-toggle.active span::before, #nav-toggle.active span::after {top: 0;}
+	#nav-toggle.active span::before {transform: rotate(45deg);}
+	#nav-toggle.active span::after {transform: rotate(-45deg);}
+	
+	#main-nav-toggle {position: absolute; display: table; max-width: 2.5rem; height: 1.45rem; padding-right: .7rem; padding-left: .35rem; border-left: 1px solid var(--gallery-color); font-size: .375rem; white-space: normal; text-decoration: none; vertical-align: middle; cursor: pointer;}
+	.no-menu #main-nav-toggle {display: none;}
+	#main-nav-toggle::after {position: absolute; top: .725rem; right: .3rem; width: 8px; height: 14px; background-image: url(../../img/arrows.png?v2); background-position: -16px -21px; transform: translate(0, -50%) rotate(-90deg); content: '';}
+	.ios #main-nav-toggle::after {right: -10px;}
+	#main-nav-toggle:hover {text-decoration: none;}
+	#main-nav-toggle.opened::after {transform: translate(0, -50%) rotate(90deg);}
+	.ind #main-nav-toggle::after {background-position: -16px -21px;}
+	.biz #main-nav-toggle::after {background-position: -63px -21px;}
+	#main-nav-toggle span {display: table-cell; vertical-align: middle; text-transform: uppercase; font-size: 13px;}
+
+	#page-head ul.submenu li:not(.rwd-add-menu) a {text-align: left;}
+
+	.nav-file.cats .proper-head, .nav-file.community .proper-head {padding-bottom: 0;}
+	.nav-file #page-head #head {padding: 0;}
+	.nav-file #nav {position: relative; left: -0.5rem; width: 100vw;}
+	.nav-file nav.active #main-nav-toggle {display: none;}
+	.nav-file #page-head nav {margin-left: 1.7em;}
+	.ios .nav-file #page-head nav ul.menu {top: 1.45rem;}
+	.mobile.ios .overflow-hidd.sb-opened.nav-file #page-head nav ul.menu {top: 3.54rem;}/* only on iOS devices we have to scroll to top of the page and on mobiles there could be a smartbanner visibled */
+	/*.mobile.ios .nav-file #page-head nav.active ul.menu::before {position: absolute; width: 100%; height: 200px; background: var(--white-color); content: '';}/* because on ios devices there is overscroll/bounce effect */
+	.nav-file #page-head nav.active {margin-left: 0; background: #fafafa;}
+	.nav-file #page-head nav.active ul.menu {left: 0; width: 100vw; padding: 0;}
+	.ios .nav-file #page-head nav.active ul.menu {position: fixed; top: 1.53rem; bottom: 0; background: none;}
+	/*.nav-file #page-head nav li	{padding: 0;}*/
+	.nav-file #page-head nav.active ul.menu > li {position: relative; overflow-y: scroll; overflow-x: hidden; transition: height .2s;}
+	.nav-file #page-head nav.active ul.menu li.added-box {display: none !important /* list-item */; margin: 0; padding: .5rem .375rem; background-color: var(--white-shaded-color);}
+	.ios .nav-file #page-head nav.active ul.menu > li.active {height: 100%;}
+	.nav-file #page-head li.dropdown > ul.submenu > li.offer-box {display: none;}
+	/* nowe style nadpisujace stare */
+	.nav-file #page-head ul > li.active > ul.submenu {display: block; margin-left: 0;}
+	.nav-file #page-head li ul.submenu {display: block; background-color: var(--white-color); margin: 1.5rem 0 0; padding: 0; box-shadow: none; overflow: hidden;}
+	/*
+	.nav-file #page-head li ul.submenu, .nav-file #page-head nav ul li ul.submenu, .firefox .nav-file #page-head nav ul li ul.submenu {display: block; background-color: var(--white-color); margin: 1.5rem 0 0; padding: 0; box-shadow: none; overflow: hidden;}
+	*/
+	.nav-file #page-head li ul.submenu.opened {overflow-y: scroll;}
+	.nav-file #page-head li ul.submenu {transition: .4s;}
+	.nav-file #page-head li.show ul.submenu {left: -120vw; transition: .2s;}
+	.nav-file #nav-toggle.active {top: -9px; left: calc(61.5% - 52.8vw);}
+	#nav-toggle span {top: 28px; left: 23px;}
+	#logotype #nav-toggle {width: 68px; height: 60px; left: -.5rem; top: 0;}
+	.nav-file #logotype #nav-toggle.active {top: -9px; left: calc(61.5% - 52.8vw);}
+
+	.nav-file #nav-toggle span, .nav-file #nav-toggle span::before, .nav-file #nav-toggle span::after {width: 23px;}
+
+	.nav-file #page-head .menu > li > .menu-item-wrapper {padding-left: 2.1rem;}
+	.nav-file #page-head li.active ul.submenu ul.submenu {display: block;}
+	.nav-file #page-head ul.submenu {top: -60px;/* font-size: 1.125em;*/}
+	.nav-file #page-head ul.submenu li, .firefox .nav-file #page-head ul.submenu li {height: auto;}
+	.nav-file #page-head ul.submenu li.dropdown::after {right: 6px; width: 13px; height: 7px; background-size: 13px; transform: rotate(-90deg);}
+	.biz.nav-file #page-head ul.submenu li.dropdown::after {background-position: 0 -15px;}
+	.corpo.nav-file #page-head ul.submenu li.dropdown::after {background-position: 0 -23px;}
+	.priv.nav-file #page-head ul.submenu li.dropdown::after {background-position: 0 -8px;}
+	.premium.nav-file #page-head ul.submenu li.dropdown::after {background-position: 0 -40px;}
+	.em.nav-file #page-head ul.submenu li.dropdown::after {background-position: 0 -32px;}
+	.nav-file #page-head li.dropdown > ul.submenu > li.offer-box {display: none !important;}
+	.nav-file #page-head ul.submenu li.dropdown.opened::after {transform: none;}
+	.nav-file #page-head nav ul.submenu li.active a::before {content: none;}
+	.nav-file #page-head ul.submenu li > div > a, .nav-file #page-head ul.submenu li:first-child > div > a {padding: .25rem .5rem .25rem 1rem;}
+	
+	.nav-file #page-head li ul ul.submenu {position: absolute; top: -1px; left: 100vw; display: block; width: 100vw; padding: 0; box-shadow: none; visibility: hidden;}
+	.nav-file #page-head li.active ul ul.submenu li {margin: 0; padding: 0 .375rem;}
+	.nav-file #page-head li ul.opened ul.submenu {left: -0.4rem; visibility: visible;}
+	.nav-file #page-head li ul ul.submenu li {white-space: normal;}
+	.nav-file #page-head li ul ul.submenu li > div > a {text-transform: lowercase; font-family: inherit; font-size: 1em;}
+	.nav-file #page-head li ul ul.submenu li:last-child > div > a {border-bottom: none;}
+	.nav-file #page-head li ul ul.submenu li.back a {padding-top: .8em; padding-bottom: .8em; font-size: .8em;}
+	.nav-file #page-head li ul ul.submenu li.back a::before {position: absolute; top: 0; bottom: 0; left: 15px; display: block; width: 13px; height: 7px; margin: auto; background: url(../../img/arrows.svg) no-repeat; background-size: 13px;transform: rotate(90deg); content: '';}
+	.ind.nav-file #page-head li ul ul.submenu li.back a::before {background-position: 0 0;}
+	.biz.nav-file #page-head li ul ul.submenu li.back a::before {background-position: 0 -16px;}
+	.nav-file #page-head nav ul.menu {left: 0; width: 100%; box-sizing: border-box; border-top: 0;}
+}
+
+@media screen and (max-width: 875px) {
+	#page-head nav ul {font-size: .32em;}
+	#page-head nav li {padding: 0 .3em;}
+	#page-head ul.submenu li {padding: 0 .5em;}
+	/*#page-head ul.submenu a::after {left: .6em; right: .6em;}*/
+	
+	.nav-file #page-head ul.submenu li {padding: 0;}/* in normal styles there is rule adding .5em padding but 0 padding in FF (i dont know why) */
+}
+
+@media screen and (max-width: 768px) {
+	body nav ul.submenu .rwd-add-menu a {display: none !important;}
+	body.sub.cats nav ul.submenu .rwd-add-menu.other a, body.hp.cats nav ul.submenu .rwd-add-menu.other a, body.news.community nav ul.submenu .rwd-add-menu.other a {display: block !important;}
+		
+	body.ind nav ul.submenu .rwd-add-menu a.ind, body.corpo nav ul.submenu .rwd-add-menu a.corpo, body.biz nav ul.submenu .rwd-add-menu a.biz {display: inline-table !important;}
+	#contact, #agencies {display: none !important;}
+}
+
+@media screen and (max-width: 640px) {
+	#page-head {box-shadow: 0 0 2px rgba(0, 0, 0, .4);}
+	#page-head #cta-button {display: none;}
+}
+
+@media screen and (max-width: 479px) {
+	.offer-box.promoted-3 .promo::after {left: 1.075rem;}
+}
+
+@media screen and (max-width: 414px) {
+	#page-head ul.submenu li a.submenu-item-href {padding-top: 10px; padding-bottom: 10px;}
+}
+
+@media screen and (max-width: 360px) {
+	/*#page-head nav ul.submenu {font-size: 1.1em;}*/
+	#page-head nav ul {font-size: .3em;}
+}
+
+@media screen and (max-width: 330px) {
+	#page-head .rwd-add-menu a {width: 43%;}
+	#page-head .rwd-add-menu a.contact {width: 35%;}
+	#page-head nav ul.menu {font-size: .325em;}
+	
+	/*.nav-file #page-head ul.submenu {font-size: 1.385em;}*/
+}

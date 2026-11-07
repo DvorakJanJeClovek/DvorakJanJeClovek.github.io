@@ -1,0 +1,194 @@
+/* -- blog-teaser :: v.: 0.01 r.: 19/05/25 @ pp */
+/*
+ * v. 0.01 @ pp (11/04/25): utworzenie pliku (SKCZDEV-779)
+ */
+.blog-teaser .inner {display: table; width: 100%; background: transparent; position: relative; clear: both; border-bottom: 2px solid var(--light-gray-color); padding: 0 0 0 15px;}
+.blog-teaser .inner.loan-calc {padding: 0; margin: 0;}
+.blog-teaser .inner .text ul {list-style-type: none !important;}
+.blog-teaser .inner .text ul li {position: relative;}
+.blog-teaser .inner .text li::before {position: absolute; top: 9px; left: -18px; display: inline-block; width: 6px; height: 6px; margin: 0 1em .1em 0; background: url(../img/bullets/square.png) no-repeat center; vertical-align: baseline; content: '';}
+.blog-teaser .img-box {max-width: 200px; margin: 20px 10px; display: inline-block; overflow: hidden;}
+.blog-teaser:not(.double) .img-box {width: 200px;}
+.blog-teaser:not(.double) .img-box, .blog-teaser:not(.double) .text-box {vertical-align: middle;}
+.blog-teaser .text-box:not(.inner) {width: 70%; padding: 20px 20px 40px; display: inline-block; vertical-align: top;}
+.blog-teaser .container .headline {margin-bottom: 0;}
+.blog-teaser .text-box .headline-title {font-size: .5em;}
+.blog-teaser .text-box .headline-title p {font-size: 100%;}
+.blog-teaser .text-box .text {padding-right: 10px; line-height: 18px; color: var(--def-links); font-size: .4em;}
+.blog-teaser .img-box img {max-height: 150px; margin: auto; max-width: 200px; display: block;}
+.blog-teaser.double .text-box {display: inline-block; width: 56%;}
+.blog-teaser .subtitle {padding: 0 10px 10px 10px; font-size: .5em;}
+
+.double.blog-teaser .inner {display: inline-block; width: 49%; vertical-align: middle; border: none; background: var(--light-gray-color);}
+.double.blog-teaser .img-box {vertical-align: middle; overflow: hidden;}
+.blog-teaser:not(.double) .img-box img {transition: all 1s ease;}
+.blog-teaser:not(.double) .inner:hover .img-box img {transform: scale(1.10);}
+.double.blog-teaser a.link-name {padding: 0px 0 10px;}
+.blog-teaser .inner .b-add a.link-name {z-index: 12;}
+.blog-teaser .inner.button-link .b-add a.link-name {float: right; padding: 8px 10px !important;}
+
+.col-md-6 .blog-teaser .img-box, .col-md-6 .blog-teaser .img-box img {max-width: 100%; display: block;}
+.col-md-6 .blog-teaser .text-box:not(.inner) {width: 100%; display: block;}
+
+/* -- blog teaser double for two box -- */
+.double.blog-teaser.mult {margin-top: .25em;}
+.double.blog-teaser.mult > div.container {display: table; width: 100%; padding: 0; border-collapse: collapse;}
+.firefox .double.blog-teaser.mult > div.container {border-collapse: inherit;}
+.double.blog-teaser.mult div.slot {display: table-cell; width: 50%; height: 160px; background: var(--white-color); border-right: 2px solid var(--white-color); vertical-align: middle; position: relative;}
+.double.blog-teaser.mult[data-statad] div.slot {height: 170px;}
+.double.blog-teaser div.slot {box-shadow: /*inset 0 0 0 1px var(--end-text), */inset 0 320px 0 0 var(--light-gray-color); transition: .4s;}
+.double.blog-teaser div.slot:hover {box-shadow: /*inset 0 0 0 1px var(--end-text), */inset 0 0 0 1px var(--light-gray-color);}
+.double.blog-teaser.mult div.slot:last-child {border: none;/* border-left: 1px solid var(--end-text);*/}
+.firefox .double.blog-teaser.mult div.slot:last-child, .edge .double.blog-teaser.mult div.slot:last-child {border-left: 0;}
+.double.blog-teaser[data-statad] div.slot.inited {height: auto;}
+.double.blog-teaser[data-statad] div.slot .inner {position: absolute; top: 0;}
+.double.blog-teaser[data-statad] div.slot.inited .inner, .double.blog-teaser .slot .inner {position: relative;}
+.double.blog-teaser.mult .inner {display: table-cell; clear: none; width: 50%; background: transparent; border: none; position: static !important;}
+.double.blog-teaser.mult div.inner {box-shadow: none !important;}
+.double.blog-teaser.mult .inner.inactive {display: none;}
+.double.blog-teaser.mult .text-box {padding: 20px 20px 40px 0; vertical-align: middle;}
+.double.blog-teaser.mult .img-box img {max-height: 100%;}
+.double.blog-teaser.mult a.link-name {padding: 20px 0 0;}
+.double.blog-teaser.mult .subtitle, .double.blog-teaser.mult .headline {display: none;}
+.blog-teaser .inner .text ul li {position: relative;}
+.double.blog-teaser div.slot.button {position: relative !important; padding: 0; border: none !important; box-shadow: none;}
+/*.double.blog-teaser.offline .inner.hidden {display: table-cell !important;}*//* offline drawed items with stadad.js script shouldn't been hidden */
+/*.double.blog-teaser.offline .inner.button.hidden {display: block !important;}*//* offline drawed buttons have to have display block */
+.double.blog-teaser div.inner.button {display: block; width: 100%;}
+.double.blog-teaser div.slot.button div.inner.button {height: 100%;}
+.double.blog-teaser div.inner.button a {display: table; width: 100%; height: 100%; padding: 0;}
+.double.blog-teaser div.inner.button a div {display: table-cell; padding: .6em 2em 1em .8em; vertical-align: middle;}
+.double.blog-teaser div.inner.button a div p {margin-bottom: 0; color: var(--white-color);}
+.double.blog-teaser div.inner.button .button.big.red.next::after {width: 23px; height: 36px; background: url(../img/arrows.png) no-repeat -110px 0; background-size: 309px;}
+.blog-teaser.double .inner.button-link .b-add, .blog-teaser .inner.button-link .b-add {right: 15px;}
+.blog-teaser.double .inner.button-link .link-name::before, .blog-teaser.double .inner.button-link .link-name:hover::before, .blog-teaser .inner.button-link .link-name::before, .blog-teaser .inner.button-link .link-name:hover::before {display: none;}
+
+/* blog teaser double for two box */
+.blog-teaser .text-box .text .link-name {font-size: 100%;}
+.blog-teaser .no-img .text-box {width: 100%; padding: 20px 20px 30px;}
+.blog-teaser .no-img .b-add {bottom: 15px; margin-left: 20px;}
+.double.blog-teaser.mult .inner:last-child {border: none;}
+.double.blog-teaser.mult .inner.button {padding: 0;}
+.double.blog-teaser.mult .no-img .text-box {padding: 20px 20px 20px 10px;}
+.blog-teaser.double .inner.no-img .b-add {margin-left: 0;}
+.double.blog-teaser.mult .img-box img {width: auto; max-height: 100%; max-width: 100%;}
+.double.blog-teaser.mult a.link-name {padding: 0 !important;}
+/*.blog-teaser a.link-name.outer {position: relative; display: block; font-size: 100%; text-indent: 0;}*/
+.blog-teaser a.link-name.outer {position: absolute; display: block; font-size: 100%; text-indent: 0; height: 100%; width: 100%; z-index: 1;}
+.double.blog-teaser.mult .text-box .text {font-size: .4em;}
+.double.blog-teaser.mult .subtitle, .double.blog-teaser.mult .headline {display: none;}
+
+.blog-teaser .b-add {bottom: 12px; width: auto; margin-left: 250px; line-height: 0.4;}
+.blog-teaser.double .b-add {left: 0; right: 0; bottom: 20px; z-index: 2; margin-left: 32%; width: auto;}
+.blog-teaser.double .text-box {display: inline-block; width: 56%;}
+.double.blog-teaser.mult .img-box {display: inline-block; width: 25%; min-width: 25%;}
+.blog-teaser.double .inner.no-img .text-box {width: 100%;}
+.double.blog-teaser .inner {background: transparent; transition: .4s; box-shadow: inset 0 300 0 0 var(--light-border-color), inset 0 0 0 1px var(--light-border-color);}
+.double.blog-teaser .inner:hover {box-shadow: inset 0 0 0 1px var(--light-border-color), inset 0 0 0 1px var(--light-border-color) !important;}
+.blog-teaser .text-box .headline-title {font-size: .5em;}
+.blog-teaser .text-box .headline-title p {font-size: 100%;}
+
+/*for legal note in blog teaser*/
+.blog-teaser .legal-note {right: initial; width: 49%; height: 10%; text-align: right;}
+.blog-teaser .legal-label {top: -23px; right: 5px; bottom: 5px;  z-index: 999; padding: 4px 5px;}
+.blog-teaser .legal-text {position: absolute; top: 105%; left: initial; right: 0;}
+.b-add .legal-text {top: 40px; left: 0px;}
+.b-add .legal-text::before {right: 35px;}
+.double.blog-teaser .legal-note {top: 95%;}
+
+@media only screen and (max-width: 1217px) {
+	.double.blog-teaser.mult .img-box img {width: 100%; max-height: 100%;}
+}
+@media only screen and (max-width: 1124px) {
+	.double.blog-teaser.mult .button.red p.heading.h1 {font-size: 1.1rem;}
+	.double.blog-teaser.mult .button.red p.heading.h3 {font-size: .65rem;}
+}
+@media only screen and (min-width: 1025px)  /* special for half-long portlets */ {
+	.col-md-6 .double.blog-teaser .inner {width: 100%; margin-bottom: 2px; padding: 0;}
+}
+@media only screen and (max-width: 1024px) {
+	.blog-teaser.double .b-add {margin-left: 30.50%;}
+	
+	.double.blog-teaser .inner {width: 100%; margin-bottom: 2px; padding: 0;}
+	.double.blog-teaser.mult .button.red p.heading.h1 {font-size: 1rem;}
+	.double.blog-teaser.mult .button.red p.heading.h3 {font-size: .6rem;}
+}
+@media screen and (max-width: 960px) {
+	.blog-teaser .text-box:not(.inner) {width: 65%;}
+	.double.blog-teaser.mult .text-box {width: 55%;}
+}
+@media screen and (max-width: 959px) {
+	.col-md-6 .blog-teaser .img-box {display: table-cell; max-width: 225px; min-width: 225px; padding: 20px;}
+	.col-md-6 .blog-teaser .text-box {display: table-cell; width: 80%; padding: 10px; vertical-align: top;}
+	.col-md-6 .blog-teaser .img-box img {display: block; max-height: 150px; max-width: 200px; margin: auto;}
+}
+@media screen and (max-width: 920px) {
+
+	.double.blog-teaser.mult .button.red p.heading.h1 {font-size: .9rem;}
+	.double.blog-teaser.mult .button.red p.heading.h3 {font-size: .55rem;}
+}
+@media screen and (max-width: 830px) {
+	.blog-teaser .img-box {vertical-align: top;}
+}
+@media screen and (max-width: 768px) {
+	.blog-teaser .text-box:not(.inner) {width: 55%;}
+	.blog-teaser.double .b-add {margin-left: 33%;}
+	.col-md-6 .blog-teaser .img-box, .col-md-6 .blog-teaser .img-box img {max-width: 100%; display: block;}
+	.col-md-6 .blog-teaser .text-box {width: 100%; display: block;}
+	.double.blog-teaser.mult .button.red p.heading.h1 {font-size: .8rem;}
+	.double.blog-teaser.mult .button.red p.heading.h3 {font-size: .5rem;}
+}
+@media screen and (max-width: 640px) {
+	.blog-teaser .img-box, .blog-teaser:not(.double) .img-box, .blog-teaser:not(.double) .img-box img {max-width: 185px;}
+	.blog-teaser .text-box:not(.inner) {width: 55%; padding: 20px 10px 30px;}
+	.blog-teaser .b-add {bottom: 11px; margin-left: 225px;}
+	.blog-teaser.double .b-add {margin-left: 25%;}
+	.blog-teaser.double .legal-note {width: 100%;}
+	.blog-teaser .slot .inner, .blog-teaser.double a.link-name.outer {position: relative !important;}
+	.double.blog-teaser.mult a.link-name {padding: 20px 0 0;}
+	.double.blog-teaser.mult div.slot {height: auto; border-bottom: 5px solid var(--white-color);}
+	.double.blog-teaser.mult div.slot:last-child {border-left: 0;}
+	.double.blog-teaser.mult .inner, .double.blog-teaser.mult div.slot {float: left; width: 100% !important; border-width: 5px 0 5px 0;}
+	.double.blog-teaser div.slot.button div.inner.button .button {min-height: 120px;}
+	.double.blog-teaser.mult .img-box {width: 20% !important; min-width: 20% !important;}
+	.double.blog-teaser.mult .button.red p.heading.h1 {font-size: 1.1rem;}
+	.double.blog-teaser.mult .button.red p.heading.h3 {font-size: .65rem;}
+	.double.blog-teaser.mult .no-img .text-box {box-sizing: border-box;}
+	.mac.safari .double.blog-teaser.mult div.slot, .mac.safari .double.blog-teaser.mult > div.container {display: block;}
+}
+@media screen and (max-width: 568px) {
+	.blog-teaser .img-box img {max-width: 155px;}
+	.double.blog-teaser div.slot.button div.inner.button .button {min-height: 110px;}
+	.double.blog-teaser.mult .button.red p.heading.h1 {font-size: 1rem;}
+	.double.blog-teaser.mult .button.red p.heading.h3 {font-size: .6rem;}
+}
+@media screen and (max-width: 530px) {
+	.double.blog-teaser div.slot.button div.inner.button .button {min-height: 100px;}
+	.double.blog-teaser.mult .button.red p.heading.h1 {font-size: .9rem;}
+	.double.blog-teaser.mult .button.red p.heading.h3 {font-size: .55rem;}
+}
+@media screen and (max-width: 480px) {
+	.blog-teaser .inner {padding: 0;}
+	.blog-teaser .text-box {width: 100%;}
+	.double.blog-teaser.mult div.inner {position: relative !important;}
+	.double.blog-teaser div.slot.button div.inner.button .button {min-height: 90px;}
+	.double.blog-teaser.mult .button.red p.heading.h1 {font-size: .8rem;}
+	.double.blog-teaser.mult .button.red p.heading.h3 {font-size: .5rem;}
+}
+@media screen and (max-width: 479px) {
+	.blog-teaser .text-box:not(.inner) {padding: 0 0 30px; width: 100%;}
+	.double.blog-teaser.mult .text-box:not(.inner) {padding: 10px 0 40px; width: 55%;}
+	.blog-teaser .b-add {bottom: 12px; width: auto; margin-left: 0;}
+
+	.blog-teaser.double .b-add {right: 30px; margin-left: 23%; text-align: right;}
+	.blog-teaser .legal-note {width: 100%;}
+
+	.double.blog-teaser.mult .text-box {padding: 10px 0 40px;}
+	.double.blog-teaser.mult .text-box .headline-title, .double.blog-teaser.mult .text-box .text {padding-left: 10px;}
+	.double.blog-teaser.mult .text-box .text {font-size: .4em;}
+	.double.blog-teaser.mult .img-box {width: 33% !important; min-width: auto !important;}
+	.double.blog-teaser.mult .img-box img {width: auto; max-width: 100%; max-height: 90px;}
+}
+@media screen and (max-width: 360px) {
+	.double.blog-teaser.mult .inner {display: table-cell; float: left; width: 100%; border: none;}
+}

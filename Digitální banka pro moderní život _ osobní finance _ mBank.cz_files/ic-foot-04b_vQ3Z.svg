@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 40 40"
+   version="1.1"
+   sodipodi:docname="icon_kontakt.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata3731">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>icon_kontakt</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview3729"
+     showgrid="false"
+     inkscape:zoom="5.9"
+     inkscape:cx="-1.5254237"
+     inkscape:cy="20"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs3712">
+    <style
+       id="style3710">.cls-1{fill:none;stroke:#201c17;stroke-linecap:round;stroke-linejoin:round;}.cls-2{fill:#201c17;}</style>
+  </defs>
+  <title
+     id="title3714">icon_kontakt</title>
+  <path
+     class="cls-1"
+     d="m 13.720524,5.5296433 h 22.242508 a 3.0037149,3.0037149 0 0 1 3.003716,3.0037149 V 23.146432 a 3.0037149,3.0037149 0 0 1 -3.003716,3.003714 H 25.855531"
+     id="path3716"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#201c17;stroke-width:1.5018574;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     class="cls-1"
+     d="m 13.675468,8.1278567 9.611887,8.3503283 a 2.3579163,2.3579163 0 0 0 3.093827,0 l 9.58185,-8.3503283"
+     id="path3718"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#201c17;stroke-width:1.5018574;stroke-linecap:round;stroke-linejoin:round" />
+  <line
+     class="cls-1"
+     x1="33.860435"
+     y1="21.524426"
+     x2="27.777908"
+     y2="15.441902"
+     id="line3720"
+     style="fill:none;stroke:#201c17;stroke-width:1.5018574;stroke-linecap:round;stroke-linejoin:round" />
+  <line
+     class="cls-1"
+     x1="18.421337"
+     y1="19.121452"
+     x2="21.86059"
+     y2="15.682201"
+     id="line3722"
+     style="fill:none;stroke:#201c17;stroke-width:1.5018574;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     class="cls-1"
+     d="M 9.8156933,29.153862 A 46.182116,46.182116 0 0 1 6.0460315,23.972453 C 2.141202,17.859893 0.54923316,13.144061 1.1649946,9.6297138 A 3.5744208,3.5744208 0 0 1 2.7870007,7.6322437 14.357758,14.357758 0 0 1 4.7844707,6.3706835 Q 5.5203818,6.0102376 6.015994,5.8149961 A 2.6883248,2.6883248 0 0 1 7.698075,5.6497919 2.2077304,2.2077304 0 0 1 9.3050617,6.8963336 v 0 C 9.9358421,8.398191 10.686772,10.245476 11.497775,12.483243 a 2.6432692,2.6432692 0 0 1 -0.690854,2.64327 c -0.180224,0.225278 -0.630781,0.750929 -1.3216355,1.501857 a 33.176032,33.176032 0 0 0 2.1176185,3.724607 36.88562,36.88562 0 0 0 2.433009,3.454271 c 1.006245,-0.330408 1.667062,-0.540668 1.967433,-0.615761 a 3.1989564,3.1989564 0 0 1 1.606988,-0.04506 2.2377677,2.2377677 0 0 1 1.051301,0.52565 c 1.26156,1.216505 2.673305,2.673307 4.2052,4.355386 a 2.222749,2.222749 0 0 1 0.555687,1.742155 3.0037149,3.0037149 0 0 1 -0.901114,1.772193 c -0.240298,0.225278 -0.570705,0.510631 -1.021263,0.871076 a 18.022289,18.022289 0 0 1 -1.967433,1.321635 4.130108,4.130108 0 0 1 -2.042527,0.73591 H 17.099703 A 10.813374,10.813374 0 0 1 13.43517,32.608129"
+     id="path3726"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#201c17;stroke-width:1.5018574;stroke-linecap:round;stroke-linejoin:round" />
+</svg>
