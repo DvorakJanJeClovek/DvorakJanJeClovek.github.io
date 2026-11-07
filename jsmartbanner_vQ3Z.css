@@ -1,0 +1,55 @@
+/*!
+ * CSS-Doc for mBank SmartBanner :: 25/03/2016 @ pp
+ * version: 0.03 release: 15/04/2016 @ pp
+ */
+#smartbanner {position: relative !important; left: 0; top: -82px; z-index: 9998; width: 100%; height: 80px; font-family: 'Helvetica Neue', sans-serif; -webkit-font-smoothing: antialiased; box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); overflow: hidden;}
+#smartbanner.ios {background: #eee;}
+#smartbanner.android {position: relative !important; left: 0; top: -82px; z-index: 9998; width: 100%; height: 80px; background: #fff;}
+#smartbanner.android::after {position: absolute; top: 75px; display: block; width: 100%; height: 5px; content: '';}
+#smartbanner.android::after {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background-image: -moz-linear-gradient(left,#e41e0a 0,#e41e0a 27%,#201c17 27%,#201c17 32%,#f39100 32%,#f39100 57%,#cc0b18 57%,#cc0b18 73%,#0077bd 73%,#0077bd 77%,#18a035 77%,#18a035 100%);
+    background-image: -webkit-gradient(linear,left top,right top,color-stop(0%,#e41e0a),color-stop(27%,#e41e0a),color-stop(27%,#201c17),color-stop(32%,#201c17),color-stop(32%,#f39100),color-stop(57%,#f39100),color-stop(57%,#cc0b18),color-stop(73%,#cc0b18),color-stop(73%,#0077bd),color-stop(77%,#0077bd),color-stop(77%,#18a035),color-stop(100%,#18a035));
+    background-image: -webkit-linear-gradient(left,#e41e0a 0,#e41e0a 27%,#201c17 27%,#201c17 32%,#f39100 32%,#f39100 57%,#cc0b18 57%,#cc0b18 73%,#0077bd 73%,#0077bd 77%,#18a035 77%,#18a035 100%);
+    background-image: -o-linear-gradient(left,#e41e0a 0,#e41e0a 27%,#201c17 27%,#201c17 32%,#f39100 32%,#f39100 57%,#cc0b18 57%,#cc0b18 73%,#0077bd 73%,#0077bd 77%,#18a035 77%,#18a035 100%);
+    background-image: -ms-linear-gradient(left,#e41e0a 0,#e41e0a 27%,#201c17 27%,#201c17 32%,#f39100 32%,#f39100 57%,#cc0b18 57%,#cc0b18 73%,#0077bd 73%,#0077bd 77%,#18a035 77%,#18a035 100%);
+    background-image: linear-gradient(to right,#e41e0a 0,#e41e0a 27%,#201c17 27%,#201c17 32%,#f39100 32%,#f39100 57%,#cc0b18 57%,#cc0b18 73%,#0077bd 73%,#0077bd 77%,#18a035 77%,#18a035 100%);
+}
+#smartbanner, html.sb-animation {-webkit-transition: all .3s ease;}
+#smartbanner.shown {top: 0;}
+#smartbanner .sb-container { margin: 0 auto; }
+#smartbanner .sb-close {position: absolute; left: 5px; display: block; width: 14px; height: 14px; color: #000; font-family:'ArialRoundedMTBold', Arial; font-size: 15px; line-height: 15px; text-align: center; text-decoration: none; text-shadow: none;}
+#smartbanner.ios .sb-close {top: 0; bottom: 0; margin: auto; font-family: serif; font-size: 25px; line-height: 15px; -webkit-font-smoothing: subpixel-antialiased;}
+#smartbanner.android .sb-close {top: 5px; border: 1px solid #000; border-radius: 14px; background: #fff;}
+#smartbanner.ios .sb-close:hover {color: #555;}
+#smartbanner.android .sb-close:hover {background: #ddd;}
+#smartbanner .sb-icon {position: absolute; left: 33px; top: 14px; display: block; width: 50px; height: 50px; background-size: cover;}
+#smartbanner.ios .sb-icon {left: 25px; top: 0; bottom: 0; width: 55px; height: 55px; margin: auto; border-radius: 10px;}
+#smartbanner.android .sb-icon {left: 32px; top: 14px; width: 50px; height: 50px;}
+#smartbanner.android .sb-icon::before {position: absolute; top: -5px; left: -5px; display: block; width: 58px; height: 58px; border: 1px solid #999; border-radius: 5px; content: '';}
+#smartbanner.no-icon .sb-icon { display:none; }
+#smartbanner .sb-info {}
+#smartbanner .sb-info {position: absolute; left: 98px; top: 15px; width: 47%; color: #000; font-size: 11px; line-height: 1.2em;}
+#smartbanner.ios .sb-info {left: 90px; top: 15px; width: 50%; font-size: 12px; line-height: 1.2em;}
+#smartbanner.android .sb-info {left: 95px; font-size: 11px; font-weight: bold;}
+#smartbanner #smartbanner.no-icon .sb-info { left: 34px; }
+#smartbanner .sb-info strong {display: block; margin: 0 0 5px; color: #000; font-size: 12px; line-height: 18px;}
+#smartbanner.ios .sb-info strong {font-family: inherit; font-weight: normal;}
+#smartbanner.android .sb-info strong {font-weight: bold;}
+#smartbanner .sb-info > span { display:block; }
+#smartbanner .sb-info em {font-style: normal; text-transform: uppercase;}
+#smartbanner .sb-button {}
+#smartbanner .sb-button {position: absolute; right: 20px; top: 24px; text-align: center; font-size: 14px; text-decoration: none;}
+#smartbanner.ios .sb-button {top: 31px; right: 15px; color: #00f; text-align: center; font-size: 17px; text-decoration: none;}
+#smartbanner.android .sb-button {right: 18px; padding: 0 10px; height: 28px; color: #fff; line-height: 28px; text-align: center; font-size: 14px; font-weight: bold; background: #e41609; text-decoration: none; border-radius: 5px;}
+#smartbanner.ios .sb-button:active, #smartbanner.ios .sb-button:hover {color: #66f;}
+#smartbanner.android .sb-button:active, #smartbanner.android .sb-button:hover {background: #d1202e;}
+
+#smartbanner.android .sb-icon.gloss::after {position: absolute; left: 0; top: -1px; width: 100%; height: 50%; background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 100%); content: '';}
+
+#smartbanner.android {}
+#smartbanner.android .sb-button span {}
+#smartbanner.android .sb-button:active, #smartbanner.android .sb-button:hover {}
+#smartbanner.android .sb-button:active span, #smartbanner.android .sb-button:hover span {}
+
+#smartbanner.windows .sb-icon { border-radius: 0px; }

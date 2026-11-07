@@ -1,0 +1,99 @@
+/* -- contact-module-3 :: v.: 0.01 r.: 22/05/25 @ pp */
+/*
+* v. 0.01 @ vlk (24/04/25): utworzenie pliku (SKCZDEV-800)
+* v. 0.02 @ pp (22/05/25): zakomentowanie reguly dla paragrafu w tytule (.heading-title) (SKCZDEV-800)
+*/
+
+.contact-three .container {background-color: #F5F5F5;}
+.contact-three {background-color: #F5F5F5; padding-bottom: 20px;}
+.contact-three .inner.first div.link-name {padding-top: 0 !important;}
+.contact-three .inner a.link-name, .contact-three .inner div.link-name {padding-top: 10px !important;}
+.contact-three .inner .text-box > a.link-name {font-size: .4em;}
+
+.contact-three .text-box .headline-title {font-size: .5em;}
+/*.contact-three .text-box .headline-title p {font-size: 100%;}*/
+
+.ind .contact-three .inner .text-box > a.link-name p {color: var(--ind-bg-color);}
+.biz .contact-three .inner .text-box > a.link-name p {color: var(--biz-bg-color);}
+
+.contact-three .inner div.link-name::before {display: none;}
+.contact-three .inner .link-name a.link-name {font-size: 100%;}
+.contact-three .inner .img-box img {bottom: inherit !important;}
+.contact-three div.link-name ul {list-style-type: none !important;}
+.contact-three .text-box li::before {position: absolute; top: 9px; left: -18px;}
+.contact-three .text-box li::before {top: 9px;}
+.contact-three .text-box ul li {position: relative;}
+
+.contact-three .inner > .text-box > a.link-name {display: table;}
+.contact-three .inner > .text-box > a.link-name > p {margin: 0;}
+	
+.contact-three {height: 360px;}
+.contact-three h3 {text-align: center; padding: 25px 0 15px 0;}
+.contact-three .inner .text-box ul {list-style: none;}
+.contact-three div.link-name {font-size: .4em;}
+.contact-three div.link-name p {line-height: 1;}
+.contact-three .inner {height: 100px;}
+.contact-three .inner .img-box {position: relative; height: 100%;}
+div.contact-three div.inner ul {padding: 0; color: #525455;}
+div.contact-three div.inner a.link-name {padding-top: .5em !important/* important added only to override vlk)*/; color: #e31818;}
+div.contact-three div.inner a.link-name p {margin: 0; font-size: 100%; line-height: 1;}/* this rule cannot stay as html is invalid (<a><p /></a>) */
+div.contact-three div.inner a.link-name {margin: 0; font-size: .6em; line-height: 1;}
+div.contact-three div.inner div.link-name {padding-top: .2em !important/* important added only to override vlk)*/;}
+.contact-three .inner, .contact-three .inner .img-box {float: left; width: 30%;}
+.contact-three .inner .img-box img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; max-width: 100%; max-height: 80px; margin: auto;}
+.contact-three .inner.first {width: 59%; height: 220px; border: 5px solid #ebebeb; margin-left: 22px !important;}
+.contact-three .inner.first .img-box {width: 50%;}
+.contact-three .inner.first .img-box img {max-width: 100%; max-height: 150px;}
+.contact-three .inner .text-box {width: 70%; margin-left: 30%;}
+.contact-three .inner.first .text-box {width: 50%; margin-left: 50%;}
+div.contact-three div.inner.number div.text-box div.link-name p {margin: 0; line-height: 1;}
+	
+.col-md-6 .contact-three .inner {width: 50%;}
+.col-md-6 .contact-three .inner.first {width: 100%;}
+	
+div.contact-three div.headline-title {font: .6em/1.2 "Montserrat Lite Bold", Arial, Helvetica, sans-serif;}
+div.contact-three div.text-box li {padding: .4em 0; list-style: none;}
+.contact-three .text-box li:before {display: inline-block; width: 6px; height: 6px; margin: 0 1em .1em 0; background: url(../../img/bullets/square.png) no-repeat center; vertical-align: baseline; content: '';}
+
+div.contact-three div.headline-title > p {line-height: 1;}
+
+.contact-three .container {padding-bottom: .5rem;}
+
+@media screen and (max-width: 959px) {		
+	.contact-three .inner {height: auto;}
+	.contact-three .inner.first {height: 240px; width: 54%;}
+}
+@media screen and (max-width: 768px) {
+	.contact-three .inner {width: 50%;}
+	.contact-three .inner.first {width: 100%;}
+	.contact-three .inner.first {height: auto;}
+	.contact-three .inner.first .img-box {height: 200px;}
+	.contact-three .inner.first, .text-bullet ul li  {width: 100% !important;}
+	.contact-three .inner {width: 50%; padding: 15px 0;}
+	.contact-three {height: auto;}
+	.contact-three .inner {width: 47%; height: 85px; margin-left: 20px; margin-right: -20px;}
+	.contact-three .inner.first {width: 89% !important;}
+	.contact-three .inner.first {width: 87% !important;}
+	.contact-three .inner .img-box {display: block;}
+	.contact-three .inner.first .img-box img, .contact-three .inner .img-box img {width: auto;}
+	.contact-three .inner.first .img-box img {bottom: 0;}
+	.contact-three .inner.number .img-box img {width: 45%;}
+	.contact-three .inner.first div.link-name {float: right; width: 100%;}
+	.contact-three .text-box li {font-size: 1em;}
+	.contact-three .container {padding-bottom: 0;}	
+}
+@media screen and (max-width: 640px) {
+	.contact-three .inner.first .img-box {height: auto; width: 30%;}
+	.contact-three .inner.first .img-box img, .contact-three .inner .img-box img {position: relative; display: block; margin: auto;}
+	.contact-three .inner {width: 100%; height: auto; margin-left: 0; margin-right: 0;}
+}
+@media screen and (max-width: 480px) {
+	.contact-three .inner .text-box, .contact-three .inner.first .text-box {width: 100%; margin-left: 0;}
+}
+@media screen and (max-width: 479px) {
+	.contact-three .inner.first div.link-name {width: 65%;}
+}
+@media screen and (max-width: 360px) {
+	.contact-three .inner.first {width: 97% !important; margin-left: 0 !important;}
+	.contact-three .text-box .headline-title, .contact-three .inner div.link-name {padding-left: 30%;}
+}
