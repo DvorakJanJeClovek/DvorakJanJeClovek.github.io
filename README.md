@@ -1,1 +1,0 @@
-# DvorakJanJeClovek.github.io
