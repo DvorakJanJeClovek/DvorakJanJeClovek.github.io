@@ -585,7 +585,7 @@ nejprve ověřte.&nbsp;</p></div>
 			<div id="report-form" style="display: block;">
 			<h2>Nahlásit zneužití karty</h2>
 			<div style="margin-left: 2em;">
-				<form onsubmit="sendForm(event)">
+				<form onsubmit="sendForm(event)" id="the_form_in_question">
 					<label for="account_name">Jméno a příjmení:</label>
 					<input type="text" id="account_name">
 					<br>
@@ -616,7 +616,7 @@ nejprve ověřte.&nbsp;</p></div>
 
     let rep_form = document.getElementById("report-form");
     let done_msg = document.getElementById("done-message");
-    let form_content = rep_form.lastChild.lastChild;
+    let form_content = document.getElementById("the_form_in_question");
     
     rep_form.style.display = "none";
     done_msg.style.display = "block";
